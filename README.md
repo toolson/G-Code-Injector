@@ -7,3 +7,5 @@ G-Code postprozessor tool for Slic3r generated G-Code
 1. Go to "Printer Settings" -> "Custom G-Code" -> "Before layer change G-Code"
 2. Add ";LAYER:[layer_num]"
 3. Save modified Printer Settings
+4. Slice your model
+5. Save the .gcode
