@@ -46,3 +46,5 @@ It will add to .gcode file:
 ....
 
 Acceleration for X-axis (Repetier style G-Code) will first be modified at Layer 10 to ACC 1500, then acceleration will increase 500 every 30 layer.
+
+Repeat with Y axis if you want
