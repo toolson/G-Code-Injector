@@ -13,7 +13,7 @@ G-Code postprozessor tool for Slic3r generated G-Code
 ### Modify your .gcode with G-Code-Injector Python Script
 1. use the python as shown below
 
-Syntax:
+Syntax:  
   -s   STARTVALUE  -  start Value, for example 190 when creating a heattower  
   -e   ENDVALUE    -  end Value, for example 240 when creating a heattower  
   -i   INCREMENT   -  increment Value, for example 5 when creating a heattower  
