@@ -5,15 +5,14 @@ import argparse, sys
 # parse arguments
 parser = argparse.ArgumentParser(description="Postprocess a gcode file exported from Slic3r.")
 requiredData = parser.add_argument_group('required arguments')
-requiredData.add_argument('-s', '--startValue', type=int, help="start Value, for example 190 when creating a heattower", required=True)
-requiredData.add_argument('-e', '--endValue',   type=int, help="end Value, for example 240 when creating a heattower", required=True)
-requiredData.add_argument('-i', '--increment',  type=int, help="increment Value, for example 5 when creating a heattower", required=True)
-requiredData.add_argument('-sl', '--StartLayer', type=int, help="StartLayer, first Layer for injection, for example 10", required=True)
-requiredData.add_argument('-l', '--LayerCount', type=int, help="LayerCount, change value every x Layer", required=True)
+requiredData.add_argument('-s', '--startValue', type=int, help="start value, for example 190 when creating a heattower", required=True)
+requiredData.add_argument('-e', '--endValue',   type=int, help="end value, for example 240 when creating a heattower", required=True)
+requiredData.add_argument('-i', '--increment',  type=int, help="increment value, for example 5 when creating a heattower", required=True)
+requiredData.add_argument('-sl', '--StartLayer', type=int, help="start layer, first Layer for injection, for example 10", required=True)
+requiredData.add_argument('-l', '--LayerCount', type=int, help="layer count, change value every x Layer", required=True)
 requiredData.add_argument('-g', '--GCode', type=str, help="G-Code that will be injected, for example M104 when creating a heattower", required=True)
-requiredData.add_argument('-p', '--Parameter', type=str, help="Paramter that will be injected, for example S when creating a heattower", required=True)
-requiredData.add_argument('-f', '--GCodeFile', help="The .gcode file to process.", required=True)
-requiredData.add_argument('-b', '--Begin', help="Select Start Layer", required=False)
+requiredData.add_argument('-p', '--Parameter', type=str, help="paramter that will be injected, for example S when creating a heattower", required=True)
+requiredData.add_argument('-f', '--GCodeFile', help="the .gcode file to process", required=True)
 args = parser.parse_args()
 
 # create output filename
