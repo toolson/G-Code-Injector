@@ -46,13 +46,10 @@ try:
         step = abs(step)
     else:
         step = abs(step) * -1
-    # print("step: {}".format(step))
     
     # make the list of layers where acceleration needs to be changed        
     for i in range(args.startValue,args.endValue+step,step):
-        #print("currentValue: {}".format(currentValue));
-        layerList.append(";LAYER:" + str(currentLayerNr) + '\n')
-        #print("-> layerLine: \"{}\"".format(layerList[-1]))
+        layerList.append(";LAYER:" + str(currentLayerNr) + '\n'z
         currentLayerNr+=args.LayerCount
         currentValue+=step
         
@@ -63,7 +60,7 @@ try:
     for LINE in gcodeInput:
         gcodeOutput.write(LINE)
         if currentLayerStr != "" and LINE.find(currentLayerStr)!=-1:
-            # beginning from layer 10 insert after each xx (LayerCount) layer the right acceleration gcode ( M201 an M202 ).
+            # beginning from StartLayer after each xx (LayerCount) injecting the additional G-Code
             gcodeOutput.write(args.GCode + " " + args.Parameter + str(currentValue) + '\n')
             print("-> " + args.GCode + " " + args.Parameter + str(currentValue) + " " + str(currentLayerStr))
             currentValue+=step
@@ -71,6 +68,7 @@ try:
                 currentLayerStr=layerList.pop(0)
             else:
                 currentLayerStr = "";
+                         
 except (IOError, OSError) as e:
     print ("I/O error({0}) in \"{1}\": {2}".format(e.errno, e.filename, e.strerror))
 except: #handle other exceptions such as attribute errors
