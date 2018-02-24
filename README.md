@@ -48,3 +48,7 @@ It will add to .gcode file:
 Acceleration for X-axis (Repetier style G-Code) will first be modified at Layer 10 to ACC 1500, then acceleration will increase 500 every 30 layer.
 
 Repeat with Y axis if you want
+
+
+#### FAQ:
+1. If you receice a "permission denied" message, try "chmod u+rx GC_Injector.py"
