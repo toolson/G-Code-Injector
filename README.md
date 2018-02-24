@@ -52,3 +52,10 @@ Repeat with Y axis if you want.
 
 #### FAQ:
 1. If you receice a "permission denied" message, try "chmod u+rx GC_Injector.py"
+
+
+------------
+
+#### credits:
+based on script by quirxi
+https://www.thingiverse.com/thing:2615842
