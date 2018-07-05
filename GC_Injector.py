@@ -48,7 +48,7 @@ try:
     
     # make the list of layers where acceleration needs to be changed        
     for i in range(args.startValue,args.endValue+step,step):
-        layerList.append(";LAYER:" + str(currentLayerNr) + '\n'z
+        layerList.append(";LAYER:" + str(currentLayerNr) + '\n')
         currentLayerNr+=args.LayerCount
         currentValue+=step
         
